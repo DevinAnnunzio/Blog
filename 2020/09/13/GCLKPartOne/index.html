@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Welcome">
 <meta property="og:description" content="Today I want to talk about the google code labs part one.  I have decided to start these to pursue a google android associate developer certificate.  This will serve as a reference for things I felt w">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-09-13T07:27:09.974Z">
+<meta property="og:updated_time" content="2020-09-15T12:25:32.857Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Google CodeLabs Kotlin Part One">
 <meta name="twitter:description" content="Today I want to talk about the google code labs part one.  I have decided to start these to pursue a google android associate developer certificate.  This will serve as a reference for things I felt w">
@@ -246,11 +246,19 @@
                 
               
 
-              <time title="Created: 2020-09-13 00:00:00 / Modified: 16:27:09" itemprop="dateCreated datePublished" datetime="2020-09-13T00:00:00+09:00">2020-09-13</time>
+              <time title="Created: 2020-09-13 00:00:00" itemprop="dateCreated datePublished" datetime="2020-09-13T00:00:00+09:00">2020-09-13</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-09-15 21:25:32" itemprop="dateModified" datetime="2020-09-15T21:25:32+09:00">2020-09-15</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -307,7 +315,7 @@
 
       
         <p>Today I want to talk about the google code labs part one.  I have decided to start these to pursue a google android associate developer certificate.  This will serve as a reference for things I felt were very important throughout the Google Codelabs series.  There are a few important takeaways from this section.  The biggest I think was how to use the FindViewById efficiently and not putting it in an onClick method.  It is best to declare the button at the top level of the class as a lateinit var, and then FindViewById in the onCreate.  The less times you use the FindViewById call the better, as it is a very expensive operation.  Each time you call FindViewById, the android system searches the entire view hierarchy.</p>
-<p>-Activities<br>First MainActivity is a subclass of AppCompatActivity.  Activities in a sense are what you see when you load into an app.  Activities are a base class for a screen.  They are usually called an activity, because each screen represents one thing that you are trying to do.  The setContectView() method in MainActivity grabs the xml file and inflates it when created.  When I say inflate, it is a process where the views defined by xml are turned into Kotlin view objects in memory.  Upon inflation the activity can call these objects to the screen and modify them.  </p>
+<p>-Activities<br>First MainActivity is a subclass of AppCompatActivity.  Activities in a sense are what you see when you load into an app.  Activities are a base class for a screen.  They are usually called an activity, because each screen represents one thing that you are trying to do.  The setContentView() method in MainActivity grabs the xml file and inflates it when created.  When I say inflate, it is a process where the views defined by xml are turned into Kotlin view objects in memory.  Upon inflation the activity can call these objects to the screen and modify them.  </p>
 <p>-Views<br>All UI elements in the layout are subclasses of the View class.  For example TextView, Button, and EditText are examples of views.  View elements can be grouped inside a ViewGroup.  A view group acts as a holder for the views, or other view groups.  For example a LinearLayout nested inside a RelativeLayout inside of another layout.  You have to reference a view object to connect the kotlin code you typed and the layout you made once it’s been inflated.  You do so by assigning an ID to your view, and using the FindViewById call to then find it.  You can also code the attributes for a view in Kotlin, such as setting the text, etc.  Lastly the setOnClickListener() method is used to attach a click handler to a view.  Click handlers are called when the user taps on a UI element such as a button.</p>
 <p>-Strings<br>You should never hard code your strings in an application.  They should all be contained in the Strings resource file.</p>
 <p>-Toasts<br>A toast is a view that shows the user a simple message in a pop up on the screen.  You call the makeText() method on a Toast class with four arguments.  First is the context of the app, second is the message, and third is the length of how long it should appear.  Lastly make sure to call the .show() method on it to display it.  </p>
