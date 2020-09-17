@@ -241,7 +241,7 @@
                 
               
 
-              <time title="Created: 2020-09-17 00:00:00 / Modified: 16:15:01" itemprop="dateCreated datePublished" datetime="2020-09-17T00:00:00+09:00">2020-09-17</time>
+              <time title="Created: 2020-09-17 00:00:00 / Modified: 16:16:14" itemprop="dateCreated datePublished" datetime="2020-09-17T00:00:00+09:00">2020-09-17</time>
             </span>
           
             
@@ -301,7 +301,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>There were a lot of interesting concepts covered in this codelab.  Specifically about using the layout editor, click listeners, and data binding.  I want to cover data binding first as I think it was probably the most important part in section two of the google code labs. I might make an entirely separate detailed step by step post later on how to use databinding.</p>
+          <p>There were a lot of interesting concepts covered in this codelab.  Specifically about using the layout editor, click listeners, and data binding.  I want to cover data binding first, as I think it was probably the most important part in this section of the code labs. I might make an entirely separate detailed step by step post later on how to use databinding.</p>
 <p>-Data binding<br>You should know how to get a reference to a specific view using the findViewById method.  Remember, when you call findViewById method. The android system has to search through the hierarchy to find it.  Typically in small apps it isn’t really a problem that would cause the app to slow down.  However, in very large apps it could definitely have a large impact on performance.  This is why data binding is very important.  Data binding is creating an object that contains a reference to views in the xml.  Data bindings main purposes are showing data, handling user events, and calling actions on layout variables.  Some of the benefits from data binding are: less code, faster apps since the binding isn’t done in onCreate, fewer errors, and easier to maintain due to less code.  I want to list the steps for data binding as it will serve as a good resource for myself in the future.  </p>
 <p>The steps for replacing findViewById with databinding:<br>1.Enable data binding in the build.gradle(app file).<br>Example:</p>
 <figure class="highlight kotlin"><figcaption><span>[Enable databinding]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">buildFeatures &#123;</span><br><span class="line">    dataBinding <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
