@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="Today I want to talk about the google code labs part one.  I have decided to start these to pursue a google android associate developer certificate.  This will serve as a reference for things I felt w">
+  <meta name="description" content="There were a lot of interesting concepts covered in this codelab.  Specifically about using the layout editor, click listeners, and data binding.  I want to cover data binding as I think it was probab">
 <meta name="keywords" content="Kotlin,Google,CodeLabs,AndroidKotlinFundamentals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Google CodeLabs Kotlin Part One">
-<meta property="og:url" content="http://yoursite.com/Blog/2020/09/13/GCLKPartOne/index.html">
+<meta property="og:title" content="GCLKPartTwo">
+<meta property="og:url" content="http://yoursite.com/Blog/2020/09/17/GCLKPartTwo/index.html">
 <meta property="og:site_name" content="Welcome">
-<meta property="og:description" content="Today I want to talk about the google code labs part one.  I have decided to start these to pursue a google android associate developer certificate.  This will serve as a reference for things I felt w">
+<meta property="og:description" content="There were a lot of interesting concepts covered in this codelab.  Specifically about using the layout editor, click listeners, and data binding.  I want to cover data binding as I think it was probab">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-09-15T12:25:32.857Z">
+<meta property="og:updated_time" content="2020-09-17T07:11:14.986Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Google CodeLabs Kotlin Part One">
-<meta name="twitter:description" content="Today I want to talk about the google code labs part one.  I have decided to start these to pursue a google android associate developer certificate.  This will serve as a reference for things I felt w">
-  <link rel="canonical" href="http://yoursite.com/Blog/2020/09/13/GCLKPartOne/">
+<meta name="twitter:title" content="GCLKPartTwo">
+<meta name="twitter:description" content="There were a lot of interesting concepts covered in this codelab.  Specifically about using the layout editor, click listeners, and data binding.  I want to cover data binding as I think it was probab">
+  <link rel="canonical" href="http://yoursite.com/Blog/2020/09/17/GCLKPartTwo/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>Google CodeLabs Kotlin Part One | Welcome</title>
+  <title>GCLKPartTwo | Welcome</title>
   
 
 
@@ -218,7 +218,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Blog/Blog/2020/09/13/GCLKPartOne/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Blog/Blog/2020/09/17/GCLKPartTwo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Devin Annunzio">
@@ -230,7 +230,7 @@
       <meta itemprop="name" content="Welcome">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Google CodeLabs Kotlin Part One
+        <h1 class="post-title" itemprop="name headline">GCLKPartTwo
 
           
         </h1>
@@ -246,19 +246,11 @@
                 
               
 
-              <time title="Created: 2020-09-13 00:00:00" itemprop="dateCreated datePublished" datetime="2020-09-13T00:00:00+09:00">2020-09-13</time>
+              <time title="Created: 2020-09-17 00:00:00 / Modified: 16:11:14" itemprop="dateCreated datePublished" datetime="2020-09-17T00:00:00+09:00">2020-09-17</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-09-15 21:25:32" itemprop="dateModified" datetime="2020-09-15T21:25:32+09:00">2020-09-15</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -300,7 +292,7 @@
       
       <span class="post-meta-item-text">Facebook: </span>
     
-    <a title="facebook comments" href="/Blog/2020/09/13/GCLKPartOne/#comments" itemprop="discussionUrl"><span class="post-comments-count fb-comments-count" data-href="http://yoursite.com/Blog/2020/09/13/GCLKPartOne/" itemprop="commentCount">0</span></a>
+    <a title="facebook comments" href="/Blog/2020/09/17/GCLKPartTwo/#comments" itemprop="discussionUrl"><span class="post-comments-count fb-comments-count" data-href="http://yoursite.com/Blog/2020/09/17/GCLKPartTwo/" itemprop="commentCount">0</span></a>
   </span>
   
   
@@ -314,14 +306,30 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Today I want to talk about the google code labs part one.  I have decided to start these to pursue a google android associate developer certificate.  This will serve as a reference for things I felt were very important throughout the Google Codelabs series.  There are a few important takeaways from this section.  The biggest I think was how to use the FindViewById efficiently and not putting it in an onClick method.  It is best to declare the button at the top level of the class as a lateinit var, and then FindViewById in the onCreate.  The less times you use the FindViewById call the better, as it is a very expensive operation.  Each time you call FindViewById, the android system searches the entire view hierarchy.</p>
-<p>-Activities<br>First MainActivity is a subclass of AppCompatActivity.  Activities in a sense are what you see when you load into an app.  Activities are a base class for a screen.  They are usually called an activity, because each screen represents one thing that you are trying to do.  The setContentView() method in MainActivity grabs the xml file and inflates it when created.  When I say inflate, it is a process where the views defined by xml are turned into Kotlin view objects in memory.  Upon inflation the activity can call these objects to the screen and modify them.  </p>
-<p>-Views<br>All UI elements in the layout are subclasses of the View class.  For example TextView, Button, and EditText are examples of views.  View elements can be grouped inside a ViewGroup.  A view group acts as a holder for the views, or other view groups.  For example a LinearLayout nested inside a RelativeLayout inside of another layout.  You have to reference a view object to connect the kotlin code you typed and the layout you made once it’s been inflated.  You do so by assigning an ID to your view, and using the FindViewById call to then find it.  You can also code the attributes for a view in Kotlin, such as setting the text, etc.  Lastly the setOnClickListener() method is used to attach a click handler to a view.  Click handlers are called when the user taps on a UI element such as a button.</p>
-<p>-Strings<br>You should never hard code your strings in an application.  They should all be contained in the Strings resource file.</p>
-<p>-Toasts<br>A toast is a view that shows the user a simple message in a pop up on the screen.  You call the makeText() method on a Toast class with four arguments.  First is the context of the app, second is the message, and third is the length of how long it should appear.  Lastly make sure to call the .show() method on it to display it.  </p>
-<p>-Vector drawables VS Bitmap images<br>Vector drawables are much better in terms of scaling on different devices without losing quality.  They are also better because typically the file size is smaller with the same image versus a bitmap image.  Vector drawables are supported from API 21 and up.</p>
-<p>-tools:src=”@drawable/dice_1”<br>This allows you to view your image in the XML design tab.  This is very useful if you’re wanting to preview how the app should look.  It will not be loaded on runtime though.</p>
-<p>-AndroidX<br>The app:srcCompat attribute uses the Android X library to support vector drawables in older versions of Android, all the way back to API level 7.  So even though my minimum SDK is 19, it allows me to use vector drawables back to API level 7.</p>
+        <p>There were a lot of interesting concepts covered in this codelab.  Specifically about using the layout editor, click listeners, and data binding.  I want to cover data binding as I think it was probably the most important part in section two of the google code labs. I might make an entirely separate detailed step by step post later on how to use databinding.</p>
+<p>-Data binding<br>You should know how to get a reference to a specific view using the findViewById method.  Remember, when you call findViewById method. The android system has to search through the hierarchy to find it.  Typically in small apps it isn’t really a problem that would cause the app to slow down.  However, in very large apps it could definitely have a large impact on performance.  This is why data binding is very important.  Data binding is creating an object that contains a reference to views in the xml.  Data bindings main purposes are showing data, handling user events, and calling actions on layout variables.  Some of the benefits from data binding are: less code, faster apps since the binding isn’t done in onCreate, fewer errors, and easier to maintain due to less code.  I want to list the steps for data binding as it will serve as a good resource for myself in the future.  </p>
+<p>The steps for replacing findViewById with databinding:<br>1.Enable data binding in the build.gradle(app file).<br>Example:</p>
+<figure class="highlight kotlin"><figcaption><span>[Enable databinding]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">buildFeatures &#123;</span><br><span class="line">    dataBinding <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.Change the layout file to use data binding and add the namespace declarations to the top level.</p>
+<figure class="highlight kotlin"><figcaption><span>[Enable databinding in layout]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;layout&gt;</span><br><span class="line">   &lt;LinearLayout ... &gt;</span><br><span class="line">   ...</span><br><span class="line">   &lt;/LinearLayout&gt;</span><br><span class="line">&lt;/layout&gt;</span><br><span class="line"></span><br><span class="line">&lt;layout xmlns:android=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">   xmlns:app=<span class="string">"http://schemas.android.com/apk/res-auto"</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3.Create the binding object<br>Go to the main activity, and at the top level create the variable for the object.</p>
+<figure class="highlight kotlin"><figcaption><span>[Creating databinding object]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">lateinit</span> <span class="keyword">var</span> binding: ActivityMainBinding</span><br></pre></td></tr></table></figure>
+
+<p>4.Use the object instead of findViewById</p>
+<p>The steps for using data binding to display data<br>1.Create the data class<br>2.Add data to layout<br>3.Create the data<br>4.Use the data class in the textview<br>5.</p>
+<p>-LinearLayout<br>A linear layout is a view group that arranges its child views horizontally(Left to right) or vertically(Up and down).</p>
+<p>-ConstraintLayout<br>A constraint layout is a view group that lets you position and size the views in an extremely flexible way.  The views are positioned using constraints.  If you don’t have a constraint, it will shift when you load the app.  The view needs at least one horizontal and vertical constraint.  Constraint layouts are great because it offers a ton of flexibility when it comes to designing for screens with different sizes.  Constraint layouts usually have a flatter view hierarchy than linear layouts.  By flat view hierarchy, I mean no nested view groups.  Constraint layouts allow for chaining, which is a pretty neat feature.  It sounds exactly like it sounds.  It allows you to connect a group of views together.</p>
+<p>-Baseline Constraints<br>A baseline constraint aligns a textview’s text to the baseline of a different views text.  This is very useful when views have different font sizes.</p>
+<p>-ScrollView<br>A scroll view is great when you need to display a very large amount of content on a screen.  It allows you to scroll from the very top of the content to the bottom.  It’s very common to put a LinearLayout inside of a ScrollView.  A very important note is ScrollView can only have one child.  I should say this again, they can only have ONE child.</p>
+<p>-ViewGroup<br>A ViewGroup is a view that contains other views inside of it.  So you can imagine a ConstraintLayout with a LinearLayout inside.</p>
+<p>-Styles<br>A style is a collection of attributes such as font color, font size, background color, padding, etc.. You can think of them as things you can use to change the look of a view.  They also allow you to consistently style views when created.</p>
+<p>-Click listeners<br>You use them to make a view respond to a certain action such as a click by the user.  The function that makes the click listener receives the view that is clicked.  There are two ways to attach a click listener to a view.</p>
+<ol>
+<li>In the xml layout, you add the android:onClick attribute to the view element.</li>
+<li>You can do it programmatically using the setOnClickListener(View.OnClickListener) function in the activity that the function interacts with.  </li>
+</ol>
 
     </div>
 
@@ -353,8 +361,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/Blog/2020/01/09/WhoAmI/" rel="next" title="Who am I?">
-                  <i class="fa fa-chevron-left"></i> Who am I?
+                <a href="/Blog/2020/09/15/HRJavaStdInAndStdout2/" rel="next" title="Java Stdin and Stdout II">
+                  <i class="fa fa-chevron-left"></i> Java Stdin and Stdout II
                 </a>
               
             </div>
@@ -362,10 +370,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/Blog/2020/09/15/HRJavaStdInAndStdout2/" rel="prev" title="Java Stdin and Stdout II">
-                  Java Stdin and Stdout II <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -387,7 +391,7 @@
     
   <div class="comments" id="comments">
     <div class="fb-comments"
-       data-href="http://yoursite.com/Blog/2020/09/13/GCLKPartOne/"
+       data-href="http://yoursite.com/Blog/2020/09/17/GCLKPartTwo/"
        data-numposts="10"
        data-width="100%"
        data-colorscheme="light">
