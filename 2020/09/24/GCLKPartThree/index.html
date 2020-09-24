@@ -55,14 +55,19 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Welcome">
-<meta property="og:url" content="http://yoursite.com/Blog/categories/Google/index.html">
+  <meta name="description" content="Google code labs part three covers fragments, defining navigation paths, and lastly starting an external activity.  So let’s get right to it and jump into fragments. What is a fragment?  A fragment is">
+<meta name="keywords" content="Kotlin,Google,CodeLabs,AndroidKotlinFundamentals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google CodeLabs Kotlin Part Three">
+<meta property="og:url" content="http://yoursite.com/Blog/2020/09/24/GCLKPartThree/index.html">
 <meta property="og:site_name" content="Welcome">
+<meta property="og:description" content="Google code labs part three covers fragments, defining navigation paths, and lastly starting an external activity.  So let’s get right to it and jump into fragments. What is a fragment?  A fragment is">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-09-24T05:48:52.828Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome">
-  <link rel="canonical" href="http://yoursite.com/Blog/categories/Google/">
+<meta name="twitter:title" content="Google CodeLabs Kotlin Part Three">
+<meta name="twitter:description" content="Google code labs part three covers fragments, defining navigation paths, and lastly starting an external activity.  So let’s get right to it and jump into fragments. What is a fragment?  A fragment is">
+  <link rel="canonical" href="http://yoursite.com/Blog/2020/09/24/GCLKPartThree/">
 
 
 <script id="page-configurations">
@@ -70,13 +75,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>Category: Google | Welcome</title>
+  <title>Google CodeLabs Kotlin Part Three | Welcome</title>
   
 
 
@@ -204,143 +209,186 @@
         <div class="content-wrap">
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block category">
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">Google<small>Category</small>
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Blog/Blog/2020/09/24/GCLKPartThree/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Devin Annunzio">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Google CodeLabs Kotlin Part Three
+
+          
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-09-24 00:00:00 / Modified: 14:48:52" itemprop="dateCreated datePublished" datetime="2020-09-24T00:00:00+09:00">2020-09-24</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Google/" itemprop="url" rel="index"><span itemprop="name">Google</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Google/Kotlin/" itemprop="url" rel="index"><span itemprop="name">Kotlin</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Google/Kotlin/CodeLabs/" itemprop="url" rel="index"><span itemprop="name">CodeLabs</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Facebook: </span>
+    
+    <a title="facebook comments" href="/Blog/2020/09/24/GCLKPartThree/#comments" itemprop="discussionUrl"><span class="post-comments-count fb-comments-count" data-href="http://yoursite.com/Blog/2020/09/24/GCLKPartThree/" itemprop="commentCount">0</span></a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+        <p>Google code labs part three covers fragments, defining navigation paths, and lastly starting an external activity.  So let’s get right to it and jump into fragments.</p>
+<p>What is a fragment?  A fragment is a component that holds part of the behaviour and UI of an activity.  Fragments are not independent and are connected to an activity.  The behaviour is similar to activities however.  We can think of fragments like oompa loompas in Charlie and the chocolate factory.  Wonka doesn’t need them to make chocolate, but they make the process 10x easier.  Some key advantages to using fragments is that they offer modularity, reusability, and lastly adaptability.  In essence they are like a sub activity.  They have their own lifecycle, and you can add or remove them when an activity is running.</p>
+<p>-Navigation components<br>To first begin using navigation components, you first need to add the dependencies: navigation-fragment-ktx and navigation-ui-ktx in the module level build.gradle file.  Then add an ext variable for the navigationVersion in the project level build.gradle file.  Navigation destinations are exactly what you would think.  They are fragments, activities, or other components that the user navigates to.</p>
+<p>-Navigation graph<br>A navigation graph is where all the possible destinations to go are.  To create a navigation graph, you create a new resource file of type Navigation.  Usually it is named navigation.  You use the navigation graph to define the navigation flow through the app.  You make a connection between destinations. The connections are represented as an action, and have an ID.</p>
+<p>-Navigation host fragment<br>Usually it is named NavHostFragment, and acts as the controller for the navigation graph.  When the user moves around between the destinations in the navigation graph, the navigation host fragment swaps the fragments and manages the back stack.  To decide which fragment is displayed you will need to set an onClick listener for the view.  </p>
+<p>-The back stack<br>Think of it like the order of activities you go to when you open an app and interact with it.  It is based on the order of each activity that is opened.  So when you open an app the title screen gets put on the back stack.  Then when you go to a new screen it gets placed on the back stack.  If you were to hit the back button, it would then remove the latest activity on the back stack and return to the title screen.  It should follow the last in first out principle.</p>
+<p>-The back button<br>The back button is typically at the bottom of your device.  It is the button you see in every single app.  The button usually takes you to the last screen you were on.  There are ways to control where the back button takes a user.  In the navigation xml, go to the fragment, and then the attributes pane.  Here you can manage the Pop To, and Inclusive behavior.  The Pop To setting removes destinations from the back stack, which determines where the user will go when pressing the back button.  Selecting the Inclusive checkbox sets the popUpToInclusive attribute to true. All destinations up to and including this destination are removed from the back stack.  If an action’s popUpTo attribute is set to the app’s starting destination and popUpToInclusive is set to true, the back button takes the user out of the app.  So it is important to know what each attribute does.</p>
+<p>-The up button<br>Screens in an app can have an Up button that appears at the top left of the app bar.  The up button should not be shown when the user first enters the app.</p>
+<p>-The options menu<br>The options menu is a menu that the user accesses from the app bar by tapping the icon with the three vertical dots. To create an options menu with a menu item that displays a Fragment.  You need to make sure the Fragment has an ID. Then define the options menu and code the onOptionsItemSelected() handler for the menu items.</p>
+<p>-The navigation drawer<br>The navigation drawer is a panel that slides out from the edge of the screen.  Usually it looks like a tab that can have a drop down menu of all the activities you can go to.</p>
+<p>-PopTo Not-Inclusive<br>Pops off everything until it finds the referenced fragment</p>
+<p>-PopTo Inclusive<br>Pops off everything on the back stack including the referenced fragment</p>
+<p>-Safe args and Bundles<br>Safe args is a plugin that you add to your gradle file.  It helps prevent bugs in regards to passing an instance of the Bundle class between fragments.  A bundle can be thought of like a dictionary.  It is a key value pair.  Without safe args some of the errors that can occur are type mismatch errors and missing key errors.  The safe args generates a NavDirection class for each fragment you have.  </p>
+<p>-Implicit Intents<br>An implicit intent declares an action that your app wants to use some other app, such as email.</p>
 
-  
-  
+    </div>
 
-  
     
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
+    
+    
         
-          <a class="post-title-link" href="/Blog/2020/09/24/GCLKPartThree/" itemprop="url">
-            <span itemprop="name">Google CodeLabs Kotlin Part Three</span>
-          </a>
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/Blog/tags/Kotlin/" rel="tag"># Kotlin</a>
+            
+              <a href="/Blog/tags/Google/" rel="tag"># Google</a>
+            
+              <a href="/Blog/tags/CodeLabs/" rel="tag"># CodeLabs</a>
+            
+              <a href="/Blog/tags/AndroidKotlinFundamentals/" rel="tag"># AndroidKotlinFundamentals</a>
+            
+          </div>
         
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-09-24T00:00:00+09:00"
-              content="2020-09-24">
-          09-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
         
-          <a class="post-title-link" href="/Blog/2020/09/17/GCLKPartTwo/" itemprop="url">
-            <span itemprop="name">Google CodeLabs Kotlin Part Two</span>
-          </a>
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/Blog/2020/09/17/GCLKPartTwo/" rel="next" title="Google CodeLabs Kotlin Part Two">
+                  <i class="fa fa-chevron-left"></i> Google CodeLabs Kotlin Part Two
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
         
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-09-17T00:00:00+09:00"
-              content="2020-09-17">
-          09-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/Blog/2020/09/13/GCLKPartOne/" itemprop="url">
-            <span itemprop="name">Google CodeLabs Kotlin Part One</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-09-13T00:00:00+09:00"
-              content="2020-09-13">
-          09-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    </div>
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
           
+    
+    
+  <div class="comments" id="comments">
+    <div class="fb-comments"
+       data-href="http://yoursite.com/Blog/2020/09/24/GCLKPartThree/"
+       data-numposts="10"
+       data-width="100%"
+       data-colorscheme="light">
+    </div>
+  </div>
+  
+  
 
         </div>
           
@@ -355,6 +403,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
