@@ -212,6 +212,167 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Blog/Blog/2020/10/01/GCLKPartFour/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Devin Annunzio">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/Blog/2020/10/01/GCLKPartFour/" class="post-title-link" itemprop="url">Google CodeLabs Kotlin Part Four</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-10-01 00:00:00 / Modified: 19:39:12" itemprop="dateCreated datePublished" datetime="2020-10-01T00:00:00+09:00">2020-10-01</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Google/" itemprop="url" rel="index"><span itemprop="name">Google</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Google/Kotlin/" itemprop="url" rel="index"><span itemprop="name">Kotlin</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Google/Kotlin/CodeLabs/" itemprop="url" rel="index"><span itemprop="name">CodeLabs</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Google/Kotlin/CodeLabs/Activity-lifecycle/" itemprop="url" rel="index"><span itemprop="name">Activity lifecycle</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Google/Kotlin/CodeLabs/Activity-lifecycle/Fragment-lifecycle/" itemprop="url" rel="index"><span itemprop="name">Fragment lifecycle</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Google/Kotlin/CodeLabs/Activity-lifecycle/Fragment-lifecycle/Lifecycle-libraries/" itemprop="url" rel="index"><span itemprop="name">Lifecycle libraries</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Google/Kotlin/CodeLabs/Activity-lifecycle/Fragment-lifecycle/Lifecycle-libraries/Lifecycle-tips/" itemprop="url" rel="index"><span itemprop="name">Lifecycle tips</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Google/Kotlin/CodeLabs/Activity-lifecycle/Fragment-lifecycle/Lifecycle-libraries/Lifecycle-tips/Bundles/" itemprop="url" rel="index"><span itemprop="name">Bundles</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Facebook: </span>
+    
+    <a title="facebook comments" href="/Blog/2020/10/01/GCLKPartFour/#comments" itemprop="discussionUrl"><span class="post-comments-count fb-comments-count" data-href="http://yoursite.com/Blog/2020/10/01/GCLKPartFour/" itemprop="commentCount">0</span></a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Lesson 4 in the google code labs was all about the life cycles of activities and fragments.  It also included information about using Timber for logging, life cycle tips, life cycle libraries, saving activity state with bundles, and configuration changes.</p>
+<p>-Activity life cycle<br>There are seven life cycle methods for an activity.  To add behavior to these life cycles, just override the method.<br>1.onCreate() - Called only once during lifetime of an activity instance<br>2.onStart()<br>3.onPause()<br>4.onRestart()<br>5.onResume()<br>6.onStop()<br>7.onDestroy() - Called only once during lifetime of an activity instance</p>
+<p>-Fragment life cycle<br>1.onAttach() - Called when the fragment is associated with its activity<br>2.onCreate() - Fragment is created<br>3.onCreateView - Inflates the fragments layout<br>4.onViewCreated() - Called once onCreateView has returned<br>5.onStart() - Called when fragment becomes visible<br>6.onResume() - Called when fragment gains focus<br>7.onPause() - Called when the fragment loses focus<br>8.onStop() - Fragment is no longer visible<br>9.onDestroyView() - Fragment is no longer needed<br>10.onDestroy()<br>11.onDetach()</p>
+<p>-Logging with android logging api<br>The log class allows you to write short messages that can be displayed in the logcat in android studio.  To do so, you use Log.I(name of the class, message)</p>
+<p>-Logging with Timber<br>Timber is a logging library that has some advantages over android’s logging api.  Some of the benefits are that it generates the log tag for you based on the class name.  Avoids showing logs in a release version of your app.  Lastly it allows for integration with crash reporting libraries.</p>
+<p>To use Timber:<br>1.Add its dependency to your Gradle file and extend the Application class to initialize it.  Application is a base class that contains global application state for your entire app. There is a default Application class that is used by Android if you don’t specify one. You can create your own Application subclass to initialize app-wide libraries such as Timber.</p>
+<p>2.Add your custom Application class to your app by adding the android:name attribute to the <application> element in the Android manifest. Make sure to do this otherwise it will not work.<br>Use Timber.i() to write log messages with Timber.  Remember the method only takes one argument, which is the message.</application></p>
+<p>-Lifecycle Tips<br>If you set something up in a lifecycle callback, make sure to stop it in a corresponding callback.  For example if you set something up in onCreate, make sure to stop it in onStop.  Use onCreate to initialize parts of your app that will only run once. Be cautious of where you initialize parts of your app in the lifecycle callbacks.</p>
+<p>-Lifecycle library<br>The android lifecycle library allows you to change the control from an activity or fragment to the component that needs to be aware of the life cycle.  Life Cycle owners have/own life cycles such as Activity and Fragment.  Life Cycle owners implement the lifecycle interface.  Lifecycle observers pay attention to the current lifecycle state and perform tasks when the lifecycle changes. Lifecycle observers implement the LifecycleObserver interface.  Lifecycle objects contain the actual lifecycle states, and they trigger events when the lifecycle changes.</p>
+<p>To create a lifecycle aware class:<br>1.Implement the lifecycle observer interface in classes that need to be aware of the life cycle.<br>2.Initialize the observer with the object in the class or fragment<br>3.In the life cycle observer class, annotate lifecycle aware methods with the lifecycle state change they are interested in.  For example, the @OnLifecycleEvent(Lifecycle.Event.ON_START)annotation indicates that the method is watching the onStart lifecycle event.</p>
+<p>-Bundles<br>Bundles are a great way to save and store data for when the user exits your app.  A bundle is a key value pair.  The keys are always strings.  </p>
+<p>To use bundles:<br>1.Use the onSaveInstanceState() callback to save other data to the bundle that you want to retain, even if the app was automatically shut down. To put data into the bundle, use the bundle methods that start with put, such as putInt().  You can get data back out of the bundle in the onRestoreInstanceState() method, or more commonly in onCreate(). The onCreate() method has a savedInstanceState parameter that holds the bundle.If the savedInstanceState variable contains null, the activity was started without a state bundle and there is no state data to retrieve.</p>
+<p>2.To retrieve data from the bundle with a key, use the Bundle methods that start with get, such as getInt().</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/Blog/Blog/2020/09/24/GCLKPartThree/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -401,7 +562,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-09-27 14:04:52" itemprop="dateModified" datetime="2020-09-27T14:04:52+09:00">2020-09-27</time>
+                <time title="Modified: 2020-09-27 14:07:08" itemprop="dateModified" datetime="2020-09-27T14:07:08+09:00">2020-09-27</time>
               </span>
             
           
@@ -905,7 +1066,7 @@
         
           <a href="/Blog/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -918,7 +1079,7 @@
             <a href="/Blog/categories/">
           
         
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">categories</span>
         </a>
       </div>
@@ -931,7 +1092,7 @@
             <a href="/Blog/tags/">
           
         
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">tags</span>
         </a>
       </div>
