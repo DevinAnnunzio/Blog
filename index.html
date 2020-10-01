@@ -928,6 +928,133 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Blog/Blog/2020/07/22/InheritanceIIHackerRank/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Devin Annunzio">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/Blog/2020/07/22/InheritanceIIHackerRank/" class="post-title-link" itemprop="url">Inheritance II Hackerrank Problem</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-07-22 00:00:00" itemprop="dateCreated datePublished" datetime="2020-07-22T00:00:00+09:00">2020-07-22</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-10-01 19:42:48" itemprop="dateModified" datetime="2020-10-01T19:42:48+09:00">2020-10-01</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Blog/categories/Java/Hackerrank/" itemprop="url" rel="index"><span itemprop="name">Hackerrank</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Facebook: </span>
+    
+    <a title="facebook comments" href="/Blog/2020/07/22/InheritanceIIHackerRank/#comments" itemprop="discussionUrl"><span class="post-comments-count fb-comments-count" data-href="http://yoursite.com/Blog/2020/07/22/InheritanceIIHackerRank/" itemprop="commentCount">0</span></a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Write the following code in your editor below:</p>
+<ol>
+<li>A class named Arithmetic with a method named add that takes two integers as parameters and returns an integer denoting their sum.</li>
+<li>A class named Adder that inherits from a superclass named Arithmetic.<br>Your classes should not be public.</li>
+</ol>
+<p>-Input Format:You are not responsible for reading any input from stdin; a locked code stub will test your submission by calling the add method on an Adder object and passing it two integer parameters.</p>
+<p>-Output Format:<br>You are not responsible for printing anything to stdout. Your add method must return the sum of its parameters.</p>
+<p>-Sample Output:<br>The main method in the Solution class above should print the following:</p>
+<p>Example:</p>
+<figure class="highlight java"><figcaption><span>[Sample output]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">My superclass is: Arithmetic</span><br><span class="line"><span class="number">42</span> <span class="number">13</span> <span class="number">20</span></span><br></pre></td></tr></table></figure>
+
+<p>Example:</p>
+<figure class="highlight java"><figcaption><span>[Solution]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.text.*;</span><br><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Write your code here</span></span><br><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">Arithmetic</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x+y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">Adder</span> <span class="keyword">extends</span> <span class="title">Arithmetic</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        <span class="comment">// Create a new Adder object</span></span><br><span class="line">        Adder a = <span class="keyword">new</span> Adder();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Print the name of the superclass on a new line</span></span><br><span class="line">        System.out.println(<span class="string">"My superclass is: "</span> + a.getClass().getSuperclass().getName());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Print the result of 3 calls to Adder's `add(int,int)` method as 3 space-separated integers:</span></span><br><span class="line">        System.out.print(a.add(<span class="number">10</span>,<span class="number">32</span>) + <span class="string">" "</span> + a.add(<span class="number">10</span>,<span class="number">3</span>) + <span class="string">" "</span> + a.add(<span class="number">10</span>,<span class="number">10</span>) + <span class="string">"\n"</span>);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/Blog/Blog/2020/01/09/WhoAmI/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1066,7 +1193,7 @@
         
           <a href="/Blog/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
